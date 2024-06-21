@@ -1,5 +1,25 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
+
+import { MessageService } from './Service/message.service';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule // Import BrowserAnimationsModule for animations
+  ],
+  providers: [MessageService], // Provide MessageService globally
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
